@@ -4,10 +4,10 @@ import { DashboardProfileComponent } from './dashboardProfile/dashboardprofile.c
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [{
-  path: 'home', component: DashboardComponent
+  path: 'dashboard/home', component: DashboardComponent
 },
 {
-path: 'page/:id', component: DashboardProfileComponent
+path: 'dashboard/page/:id', component: DashboardProfileComponent
 }
 ];
 

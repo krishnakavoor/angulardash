@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import {Router} from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
     selector: 'app-dashboard',
     templateUrl: './dashboard.component.html',
@@ -8,20 +7,21 @@ import {Router} from '@angular/router';
 })
 
 export class DashboardComponent {
-   constructor(
-        private router: Router,
+    constructor(
+        private router: Router
     ) { }
+
     listTop() {
         this.router.navigate(['/home'], { queryParams: { top: 1 } });
     }
     listTrending() {
         this.router.navigate(['/home'], { queryParams: { trending: 1 } });
     }
-    listTopics(event){
+    listTopics(event) {
         this.router.navigate(['/home'], { queryParams: { topicId: event.target.value } });
     }
 
-    listCategory(event){
-        this.router.navigate(['/home'], { queryParams: { categoryId: event.target.value} });
+    listCategory(event) {
+        this.router.navigate(['/home'], { queryParams: { categoryId: event.target.value } });
     }
 }

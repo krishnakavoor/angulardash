@@ -5,7 +5,7 @@ import {
 import { Injectable } from '@angular/core';
 import { Observable, of , throwError as observableThrowError } from 'rxjs';
 import { catchError, map, timeoutWith } from 'rxjs/operators';
-import { AjaxConfigService } from './ajaxConfig.service';
+import { AjaxConfigService } from './ajaxconfig.service';
 import { ConnectivityService } from './connectivity.service';
 import { UtilityServices } from './utility.service';
 import { ValidationService } from './validationService';
