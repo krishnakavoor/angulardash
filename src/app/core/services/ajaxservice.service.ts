@@ -46,6 +46,7 @@ export class AjaxServices extends AjaxConfigService {
 
         let url = super.getURL(requestId);
         const method = super.getMethod(requestId);
+        console.log(url);
 
         if (this.connectivity.isOffline()) {
             // in offline, we are allowing user to logout from the app
@@ -86,6 +87,16 @@ export class AjaxServices extends AjaxConfigService {
             }
         }
 
+        return this.http.request(method, url, request).pipe(
+            timeoutWith(300000, observableThrowError(new Error('Http Timeout exceeds'))),
+            map((response: any) => this.handleSuccess(response, requestId)),
+            catchError((error: HttpErrorResponse) => this.handleError(error))
+        );
+    }
+
+
+    doHttpRequestGet(method, url, request): Observable<any> {
+        const requestId = url;
         return this.http.request(method, url, request).pipe(
             timeoutWith(300000, observableThrowError(new Error('Http Timeout exceeds'))),
             map((response: any) => this.handleSuccess(response, requestId)),

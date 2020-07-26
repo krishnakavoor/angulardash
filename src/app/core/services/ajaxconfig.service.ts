@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class AjaxConfigService {
   protected requestInProgress = 0;
 
-  private baseURL = '';
+  private baseURL = 'https://restcountries.eu/rest/v2/';
   private urlConfiguration = {
 
     sampleRequest: {
