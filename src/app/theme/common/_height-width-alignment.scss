@@ -1,0 +1,185 @@
+$cnt_height: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+$cnt_width: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+$cnt_top: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+/*** media query as per bootstrap 4 ***/
+
+//Set Height for the devices
+@mixin set-Height($label-height) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    //added extra media query for iphone 5
+    @media (max-width: 325px) {
+        @each $height in $cnt_height {
+            $label: nth($height, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-height) {
+                height: nth($height, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $height in $cnt_height {
+            $label: nth($height, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-height) {
+                height: nth($height, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $height in $cnt_height {
+            $label: nth($height, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-height) {
+                height: nth($height, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $height in $cnt_height {
+            $label: nth($height, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-height) {
+                height: nth($height, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $height in $cnt_height {
+            $label: nth($height, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-height) {
+                height: nth($height, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $height in $cnt_height {
+            $label: nth($height, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-height) {
+                height: nth($height, 7) !important;
+            }
+        }
+    }
+}
+
+/*** media query as per bootstrap 4 ***/
+
+//Set Width for the devices
+@mixin set-Width($label-width) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    //added extra media query for iphone 5
+    @media (max-width: 325px) {
+        @each $width in $cnt_width {
+            $label: nth($width, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-width) {
+                width: nth($width, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $width in $cnt_width {
+            $label: nth($width, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-width) {
+                width: nth($width, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $width in $cnt_width {
+            $label: nth($width, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-width) {
+                width: nth($width, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $width in $cnt_width {
+            $label: nth($width, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-width) {
+                width: nth($width, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $width in $cnt_width {
+            $label: nth($width, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-width) {
+                width: nth($width, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $width in $cnt_width {
+            $label: nth($width, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-width) {
+                width: nth($width, 7) !important;
+            }
+        }
+    }
+}
+
+//Set top for the devices
+@mixin set-Top($top-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    //added extra media query for iphone 5
+    @media (max-width: 325px) {
+        @each $top in $cnt_top {
+            $label: nth($top, 1); // in SASS, list indices begin at 1
+            @if ($label==$top-label) {
+                top: nth($top, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $top in $cnt_top {
+            $label: nth($top, 1); // in SASS, list indices begin at 1
+            @if ($label==$top-label) {
+                top: nth($top, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $top in $cnt_top {
+            $label: nth($top, 1); // in SASS, list indices begin at 1
+            @if ($label==$top-label) {
+                top: nth($top, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $top in $cnt_top {
+            $label: nth($top, 1); // in SASS, list indices begin at 1
+            @if ($label==$top-label) {
+                top: nth($top, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $top in $cnt_top {
+            $label: nth($top, 1); // in SASS, list indices begin at 1
+            @if ($label==$top-label) {
+                top: nth($top, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $top in $cnt_top {
+            $label: nth($top, 1); // in SASS, list indices begin at 1
+            @if ($label==$top-label) {
+                top: nth($top, 7) !important;
+            }
+        }
+    }
+}
+
+/*
+// set position
+
+@mixin set-position-tablet($position, $top, $left, $right, $bottom){
+  @media (min-width: 767px) {
+    position:$position;
+    top:$top;
+    bottom:$bottom;
+    left:$left;
+    right:$right;
+  }
+}
+*/

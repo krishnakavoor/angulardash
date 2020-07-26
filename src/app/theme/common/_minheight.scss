@@ -1,0 +1,72 @@
+$cnt_min_height: (
+	('minheight-p340-t365',10.625rem,10.625rem,10.625rem,11.406rem,11.406rem,11.406rem),
+);
+
+
+
+/*** media query as per bootstrap 4 ***/
+
+//Set Min-Height for the devices
+@mixin set-Min-Height($label-height) {
+	// Extra small devices (portrait phones, less than 576px)
+	// No media query since this is the default in Bootstrap
+	//added extra media query for iphone 5
+		@media (max-width:325px){
+			 @each $height in $cnt_min_height {
+		      $label: nth($height, 1); // in SASS, list indices begin at 1
+		      @if ($label==$label-height) {
+		        min-height: nth($height, 2) !important;
+		      }
+		    }
+		}
+	// Extra small devices (portrait phones, less than 576px)
+	@media (min-width:326px) and (max-width: 575px) {
+		 @each $height in $cnt_min_height {
+	      $label: nth($height, 1); // in SASS, list indices begin at 1
+	      @if ($label==$label-height) {
+	        min-height: nth($height, 3) !important;
+	      }
+	    }
+	 }
+
+	// Small devices (landscape phones, 576px and up)
+	@media (min-width: 576px) and (max-width: 767px) { 
+		@each $height in $cnt_min_height {
+	      $label: nth($height, 1); // in SASS, list indices begin at 1
+	      @if ($label==$label-height) {
+	        min-height: nth($height, 4) !important;
+	      }
+	    }
+
+	 }
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px) and (max-width: 991px) { 
+		@each $height in $cnt_min_height {
+	      $label: nth($height, 1); // in SASS, list indices begin at 1
+	      @if ($label==$label-height) {
+	        min-height: nth($height, 5) !important;
+	      }
+	    }
+	 }
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) and (max-width: 1199px){
+		@each $height in $cnt_min_height {
+	      $label: nth($height, 1); // in SASS, list indices begin at 1
+	      @if ($label==$label-height) {
+	        min-height: nth($height, 6) !important;
+	      }
+	    }
+	}
+	// Extra large devices (large desktops, 1200px and up)
+	@media (min-width: 1200px){
+		@each $height in $cnt_min_height {
+	      $label: nth($height, 1); // in SASS, list indices begin at 1
+	      @if ($label==$label-height) {
+	        min-height: nth($height, 7) !important;
+	      }
+	    }
+	}
+}
+

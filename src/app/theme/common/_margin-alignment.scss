@@ -1,0 +1,225 @@
+$cnt_margin-top: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+$cnt_margin-bottom: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+$cnt_margin-right:( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+$cnt_margin-left:( ('margin-left-p3-t6', 0.188rem, 0.188rem, 0.188rem));
+/*** media query as per bootstrap 4 ***/
+
+//Set margin-top for the devices
+@mixin set-margin-top($margin-top-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    //added extra media query for iphone 5
+    @media (max-width: 325px) {
+        @each $margin-top in $cnt_margin-top {
+            $label: nth($margin-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-top-label) {
+                margin-top: nth($margin-top, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $margin-top in $cnt_margin-top {
+            $label: nth($margin-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-top-label) {
+                margin-top: nth($margin-top, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $margin-top in $cnt_margin-top {
+            $label: nth($margin-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-top-label) {
+                margin-top: nth($margin-top, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $margin-top in $cnt_margin-top {
+            $label: nth($margin-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-top-label) {
+                margin-top: nth($margin-top, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $margin-top in $cnt_margin-top {
+            $label: nth($margin-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-top-label) {
+                margin-top: nth($margin-top, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $margin-top in $cnt_margin-top {
+            $label: nth($margin-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-top-label) {
+                margin-top: nth($margin-top, 7) !important;
+            }
+        }
+    }
+}
+
+//Set margin-bottom for the devices
+@mixin set-margin-bottom($margin-bottom-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    //added extra media query for iphone 5
+    @media (max-width: 325px) {
+        @each $margin-bottom in $cnt_margin-bottom {
+            $label: nth($margin-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-bottom-label) {
+                margin-bottom: nth($margin-bottom, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $margin-bottom in $cnt_margin-bottom {
+            $label: nth($margin-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-bottom-label) {
+                margin-bottom: nth($margin-bottom, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $margin-bottom in $cnt_margin-bottom {
+            $label: nth($margin-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-bottom-label) {
+                margin-bottom: nth($margin-bottom, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $margin-bottom in $cnt_margin-bottom {
+            $label: nth($margin-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-bottom-label) {
+                margin-bottom: nth($margin-bottom, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $margin-bottom in $cnt_margin-bottom {
+            $label: nth($margin-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-bottom-label) {
+                margin-bottom: nth($margin-bottom, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $margin-bottom in $cnt_margin-bottom {
+            $label: nth($margin-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-bottom-label) {
+                margin-bottom: nth($margin-bottom, 7) !important;
+            }
+        }
+    }
+}
+
+//Set margin-right for the devices
+@mixin set-margin-right($margin-right-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    //added extra media query for iphone 5
+    @media (max-width: 325px) {
+        @each $margin-right in $cnt_margin-right {
+            $label: nth($margin-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-right-label) {
+                margin-right: nth($margin-right, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $margin-right in $cnt_margin-right {
+            $label: nth($margin-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-right-label) {
+                margin-right: nth($margin-right, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $margin-right in $cnt_margin-right {
+            $label: nth($margin-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-right-label) {
+                margin-right: nth($margin-right, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $margin-right in $cnt_margin-right {
+            $label: nth($margin-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-right-label) {
+                margin-right: nth($margin-right, 5) !important;
+            }
+        }
+    } // Large devices (deskrights, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $margin-right in $cnt_margin-right {
+            $label: nth($margin-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-right-label) {
+                margin-right: nth($margin-right, 6) !important;
+            }
+        }
+    } // Extra large devices (large deskrights, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $margin-right in $cnt_margin-right {
+            $label: nth($margin-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-right-label) {
+                margin-right: nth($margin-right, 7) !important;
+            }
+        }
+    }
+}
+
+//Set margin-left for the devices
+@mixin set-margin-left($margin-left-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    //added extra media query for iphone 5
+    @media (max-width: 325px) {
+        @each $margin-left in $cnt_margin-left {
+            $label: nth($margin-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-left-label) {
+                margin-left: nth($margin-left, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $margin-left in $cnt_margin-left {
+            $label: nth($margin-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-left-label) {
+                margin-left: nth($margin-left, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $margin-left in $cnt_margin-left {
+            $label: nth($margin-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-left-label) {
+                margin-left: nth($margin-left, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $margin-left in $cnt_margin-left {
+            $label: nth($margin-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-left-label) {
+                margin-left: nth($margin-left, 5) !important;
+            }
+        }
+    } // Large devices (deskrights, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $margin-left in $cnt_margin-left {
+            $label: nth($margin-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-left-label) {
+                margin-left: nth($margin-left, 6) !important;
+            }
+        }
+    } // Extra large devices (large deskrights, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $margin-left in $cnt_margin-left {
+            $label: nth($margin-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$margin-left-label) {
+                margin-left: nth($margin-left, 7) !important;
+            }
+        }
+    }
+}

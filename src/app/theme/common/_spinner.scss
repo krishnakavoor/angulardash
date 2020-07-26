@@ -1,0 +1,31 @@
+@import "../theme.scss";
+//for rotating the spinner
+.dark-modal {
+    .modal-dialog {
+        position: relative;
+        margin: 0 auto; // @include set-padding-top('spinner-padding-top');
+        // @include set-padding-left('spinner-padding-left');
+        height: 100%;
+        .modal-content {
+            border: none;
+            position: relative;
+            background: transparent;
+            padding: .4em;
+            height: inherit;
+            .spinner-header {
+                border: none;
+                height: inherit;
+                .loader-outer {
+                    min-width: 4em !important;
+                    height: 4em !important;
+                    align-items: initial;
+                    flex-direction: initial;
+                    display: flex !important;
+                    justify-content: flex-start !important;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

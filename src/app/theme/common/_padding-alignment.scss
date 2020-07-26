@@ -1,0 +1,220 @@
+$cnt_padding-top: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+$cnt_padding-bottom: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+$cnt_padding-left: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em));
+/*** media query as per bootstrap 4 ***/
+
+//Set padding-top for the devices
+@mixin set-padding-top($padding-top-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    @media (max-width: 325px) {
+        @each $padding-top in $cnt_padding-top {
+            $label: nth($padding-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-top-label) {
+                padding-top: nth($padding-top, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $padding-top in $cnt_padding-top {
+            $label: nth($padding-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-top-label) {
+                padding-top: nth($padding-top, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $padding-top in $cnt_padding-top {
+            $label: nth($padding-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-top-label) {
+                padding-top: nth($padding-top, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $padding-top in $cnt_padding-top {
+            $label: nth($padding-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-top-label) {
+                padding-top: nth($padding-top, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $padding-top in $cnt_padding-top {
+            $label: nth($padding-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-top-label) {
+                padding-top: nth($padding-top, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $padding-top in $cnt_padding-top {
+            $label: nth($padding-top, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-top-label) {
+                padding-top: nth($padding-top, 7) !important;
+            }
+        }
+    }
+}
+
+//Set padding-bottom for the devices
+@mixin set-padding-bottom($padding-bottom-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    @media (max-width: 325px) {
+        @each $padding-bottom in $cnt_padding-bottom {
+            $label: nth($padding-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-bottom-label) {
+                padding-bottom: nth($padding-bottom, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $padding-bottom in $cnt_padding-bottom {
+            $label: nth($padding-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-bottom-label) {
+                padding-bottom: nth($padding-bottom, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $padding-bottom in $cnt_padding-bottom {
+            $label: nth($padding-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-bottom-label) {
+                padding-bottom: nth($padding-bottom, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $padding-bottom in $cnt_padding-bottom {
+            $label: nth($padding-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-bottom-label) {
+                padding-bottom: nth($padding-bottom, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $padding-bottom in $cnt_padding-bottom {
+            $label: nth($padding-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-bottom-label) {
+                padding-bottom: nth($padding-bottom, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $padding-bottom in $cnt_padding-bottom {
+            $label: nth($padding-bottom, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-bottom-label) {
+                padding-bottom: nth($padding-bottom, 7) !important;
+            }
+        }
+    }
+}
+
+//Set padding-left for the devices
+@mixin set-padding-left($padding-left-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    @media (max-width: 325px) {
+        @each $padding-left in $cnt_padding-left {
+            $label: nth($padding-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-left-label) {
+                padding-left: nth($padding-left, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $padding-left in $cnt_padding-left {
+            $label: nth($padding-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-left-label) {
+                padding-left: nth($padding-left, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $padding-left in $cnt_padding-left {
+            $label: nth($padding-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-left-label) {
+                padding-left: nth($padding-left, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $padding-left in $cnt_padding-left {
+            $label: nth($padding-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-left-label) {
+                padding-left: nth($padding-left, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $padding-left in $cnt_padding-left {
+            $label: nth($padding-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-left-label) {
+                padding-left: nth($padding-left, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $padding-left in $cnt_padding-left {
+            $label: nth($padding-left, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-left-label) {
+                padding-left: nth($padding-left, 7) !important;
+            }
+        }
+    }
+}
+
+//Set padding-right for the devices
+@mixin set-padding-right($padding-right-label) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    @media (max-width: 325px) {
+        @each $padding-right in $cnt_padding-right {
+            $label: nth($padding-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-right-label) {
+                padding-right: nth($padding-right, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $padding-right in $cnt_padding-right {
+            $label: nth($padding-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-right-label) {
+                padding-right: nth($padding-right, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $padding-right in $cnt_padding-right {
+            $label: nth($padding-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-right-label) {
+                padding-right: nth($padding-right, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $padding-right in $cnt_padding-right {
+            $label: nth($padding-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-right-label) {
+                padding-right: nth($padding-right, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $padding-right in $cnt_padding-right {
+            $label: nth($padding-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-right-label) {
+                padding-right: nth($padding-right, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $padding-right in $cnt_padding-right {
+            $label: nth($padding-right, 1); // in SASS, list indices begin at 1
+            @if ($label==$padding-right-label) {
+                padding-right: nth($padding-right, 7) !important;
+            }
+        }
+    }
+}

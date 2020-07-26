@@ -1,0 +1,62 @@
+$cvm_text: ( ('example', 2em, 2em, 2em, 2.5em, 2.5em, 2.5em, "Graphik Regular"));
+/*** media query as per bootstrap 4 ***/
+
+//Set font-size for the devices
+@mixin set-font-size($label-text) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    @media (max-width: 325px) {
+        @each $text in $cvm_text {
+            $label: nth($text, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-text) {
+                font-family: nth($text, 8) !important;
+                font-size: nth($text, 2) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $text in $cvm_text {
+            $label: nth($text, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-text) {
+                font-family: nth($text, 8) !important;
+                font-size: nth($text, 3) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $text in $cvm_text {
+            $label: nth($text, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-text) {
+                font-family: nth($text, 8) !important;
+                font-size: nth($text, 4) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $text in $cvm_text {
+            $label: nth($text, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-text) {
+                font-family: nth($text, 8) !important;
+                font-size: nth($text, 5) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $text in $cvm_text {
+            $label: nth($text, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-text) {
+                font-family: nth($text, 8) !important;
+                font-size: nth($text, 6) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $text in $cvm_text {
+            $label: nth($text, 1); // in SASS, list indices begin at 1
+            @if ($label==$label-text) {
+                font-family: nth($text, 8) !important;
+                font-size: nth($text, 7) !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+$loader: "../../../assets/imgs/loader.gif";
+@mixin image-background-phone($background-image) {
+    background-image: url($background-image) !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin image-background-desktop($background-image) {
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    @media (max-width: 325px) {
+        @each $background-img in $background-image-src {
+            $label: nth($background-img, 1); // in SASS, list indices begin at 1
+            @if ($label==$background-image) {
+                background-image: url(nth($background-img, 2)) !important;
+            }
+        }
+    } // Extra small devices (portrait phones, less than 576px)
+    @media (min-width:326px) and (max-width: 575px) {
+        @each $background-img in $background-image-src {
+            $label: nth($background-img, 1); // in SASS, list indices begin at 1
+            @if ($label==$background-image) {
+                background-image: url(nth($background-img, 3)) !important;
+            }
+        }
+    } // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+        @each $background-img in $background-image-src {
+            $label: nth($background-img, 1); // in SASS, list indices begin at 1
+            @if ($label==$background-image) {
+                background-image: url(nth($background-img, 4)) !important;
+            }
+        }
+    } // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        @each $background-img in $background-image-src {
+            $label: nth($background-img, 1); // in SASS, list indices begin at 1
+            @if ($label==$background-image) {
+                background-image: url(nth($background-img, 5)) !important;
+            }
+        }
+    } // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @each $background-img in $background-image-src {
+            $label: nth($background-img, 1); // in SASS, list indices begin at 1
+            @if ($label==$background-image) {
+                background-image: url(nth($background-img, 6)) !important;
+            }
+        }
+    } // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @each $background-img in $background-image-src {
+            $label: nth($background-img, 1); // in SASS, list indices begin at 1
+            @if ($label==$background-image) {
+                background-image: url(nth($background-img, 7)) !important;
+            }
+        }
+    }
+}
