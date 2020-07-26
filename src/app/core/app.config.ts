@@ -1,5 +1,5 @@
 export const APP_CONFIG = {
-    pattern:{
+    pattern: {
         alphaNumericWithSpace: /^[a-zA-Z0-9 ]+$/
     }
 };

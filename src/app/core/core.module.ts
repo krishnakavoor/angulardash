@@ -12,7 +12,7 @@ import {HeaderComponent} from './commonComponents/header/header.component';
 import {DashboardComponent} from '../dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [ModalAlertComponent, SpinnerComponent, HeaderComponent,DashboardComponent],
+  declarations: [ModalAlertComponent, SpinnerComponent, HeaderComponent],
   providers: [
     AjaxServices,
     AjaxConfigService,
@@ -20,7 +20,7 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
     UtilityServices,
     ValidationService
   ],
-  exports: [ModalAlertComponent, SpinnerComponent, HeaderComponent,DashboardComponent],
+  exports: [ModalAlertComponent, SpinnerComponent, HeaderComponent],
   entryComponents: []
 })
 export class CoreModule {}

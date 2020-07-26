@@ -3,7 +3,7 @@
         <div class="col-md-10">
             <form class="form-inline ">
                 <div class="form-group mb-2 pr-10">
-                    <select class="custom-select">
+                    <select class="custom-select" name="categories"  (change)="listCategory($event)">
                         <option selected>Select Categories</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -11,7 +11,7 @@
                     </select>
                 </div>
                 <div class="form-group mb-2 pr-10">
-                    <select class="custom-select">
+                    <select class="custom-select" name="topics" (change)="listTopics($event)">
                         <option selected>Select Topics</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -19,10 +19,10 @@
                     </select>
                 </div>
                 <div class="form-group mb-2 pr-10">
-                    <button type="button" class="btn btn-primary pr-10">Top</button>
+                    <button type="button" class="btn btn-primary pr-10" (click)="listTop()">Top</button>
                 </div>
                 <div class="form-group mb-2 pr-10">
-                    <button type="button" class="btn btn-danger pr-10">Trending</button>
+                    <button type="button" class="btn btn-danger pr-10" (click)="listTrending()">Trending</button>
                 </div>
             </form>
 
