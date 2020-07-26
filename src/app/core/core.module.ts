@@ -8,11 +8,11 @@ import { AjaxServices } from './services/AjaxService.service';
 import { ConnectivityService } from './services/connectivity.service';
 import { UtilityServices } from './services/utility.service';
 import { ValidationService } from './services/validationService';
-import {HeaderComponent} from './commonComponents/header/header.component';
-import {DashboardComponent} from '../dashboard/dashboard.component';
+import { HeaderComponent } from './commonComponents/header/header.component';
+import { FooterComponent } from './commonComponents/footer/footer.component';
 
 @NgModule({
-  declarations: [ModalAlertComponent, SpinnerComponent, HeaderComponent],
+  declarations: [ModalAlertComponent, SpinnerComponent, HeaderComponent, FooterComponent],
   providers: [
     AjaxServices,
     AjaxConfigService,
@@ -20,7 +20,7 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
     UtilityServices,
     ValidationService
   ],
-  exports: [ModalAlertComponent, SpinnerComponent, HeaderComponent],
+  exports: [ModalAlertComponent, SpinnerComponent, HeaderComponent, FooterComponent],
   entryComponents: []
 })
-export class CoreModule {}
+export class CoreModule { }
