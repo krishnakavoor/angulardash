@@ -9,9 +9,10 @@ import { ConnectivityService } from './services/connectivity.service';
 import { UtilityServices } from './services/utility.service';
 import { ValidationService } from './services/validationService';
 import {HeaderComponent} from './commonComponents/header/header.component';
+import {DashboardComponent} from '../dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [ModalAlertComponent, SpinnerComponent, HeaderComponent],
+  declarations: [ModalAlertComponent, SpinnerComponent, HeaderComponent,DashboardComponent],
   providers: [
     AjaxServices,
     AjaxConfigService,
@@ -19,7 +20,7 @@ import {HeaderComponent} from './commonComponents/header/header.component';
     UtilityServices,
     ValidationService
   ],
-  exports: [ModalAlertComponent, SpinnerComponent, HeaderComponent],
+  exports: [ModalAlertComponent, SpinnerComponent, HeaderComponent,DashboardComponent],
   entryComponents: []
 })
 export class CoreModule {}
